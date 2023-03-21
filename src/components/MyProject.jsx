@@ -16,12 +16,12 @@ const MyProject = ({
         <img
           src={img}
           alt="my_work"
-          className="max-w-[450px] w-full min-h-[150px] text-white sm:h-72 rounded-3xl"
+          className="max-w-[450px] w-full min-h-[150px] text-white sm:h-80 rounded-3xl"
         />
       </div>
       <div className="text-white flex flex-col items-center lg:items-start">
         <h2 className="text-4xl xl:text-5xl font-semibold">{projectName}</h2>
-        <p className="text-2xl 2xl:text-3xl text-[#6a6a69] py-2 font-medium">
+        <p className="text-center text-2xl 2xl:text-3xl text-[#6a6a69] py-2 font-medium">
           {desc}
         </p>
         {/* tech stack */}

@@ -46,6 +46,7 @@ const Sidebar = () => {
           <FontAwesomeIcon
             icon={faHome}
             size="2x"
+            title="Home"
             className="fill-current hover:text-secondary transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-150 duration-300"
           />
         </NavLink>
@@ -60,20 +61,7 @@ const Sidebar = () => {
           <FontAwesomeIcon
             icon={faUser}
             size="2x"
-            className="fill-current hover:text-secondary transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-150 duration-300"
-          />
-        </NavLink>
-        <NavLink
-          exact="true"
-          activeclassname="selected"
-          to="/contact"
-          style={({ isActive }) => ({
-            color: isActive ? "var(--c-secondary)" : "var(--c-icon)",
-          })}
-        >
-          <FontAwesomeIcon
-            icon={faEnvelope}
-            size="2x"
+            title="About me"
             className="fill-current hover:text-secondary transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-150 duration-300"
           />
         </NavLink>
@@ -88,10 +76,10 @@ const Sidebar = () => {
           <FontAwesomeIcon
             icon={faBriefcase}
             size="2x"
+            title="My Works"
             className="fill-current hover:text-secondary transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-150 duration-300"
           />
         </NavLink>
-
         <NavLink
           exact="true"
           activeclassname="selected"
@@ -103,11 +91,28 @@ const Sidebar = () => {
           <FontAwesomeIcon
             icon={faCode}
             size="2x"
+            title="My Skills"
+            className="fill-current hover:text-secondary transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-150 duration-300"
+          />
+        </NavLink>
+
+        <NavLink
+          exact="true"
+          activeclassname="selected"
+          to="/contact"
+          style={({ isActive }) => ({
+            color: isActive ? "var(--c-secondary)" : "var(--c-icon)",
+          })}
+        >
+          <FontAwesomeIcon
+            icon={faEnvelope}
+            size="2x"
+            title="My Contacts"
             className="fill-current hover:text-secondary transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-150 duration-300"
           />
         </NavLink>
       </nav>
-      <ul className="hidden md:flex lg:flex-col items-center gap-x-12 lg:gap-y-8 lg:mb-5">
+      <ul className="hidden md:flex md:pr-7 lg:pr-0 lg:flex-col items-center gap-x-12 lg:gap-y-8 lg:mb-5">
         <li>
           <a
             href="https://www.linkedin.com/in/sushant-dhimal-809456202/"
@@ -194,21 +199,6 @@ const Sidebar = () => {
             <NavLink
               exact="true"
               activeclassname="selected"
-              to="/contact"
-              style={({ isActive }) => ({
-                color: isActive ? "var(--c-secondary)" : "var(--c-icon)",
-              })}
-            >
-              <FontAwesomeIcon
-                icon={faEnvelope}
-                size="2x"
-                className="fill-current hover:text-secondary transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-150 duration-300"
-                onClick={() => setToggle(false)}
-              />
-            </NavLink>
-            <NavLink
-              exact="true"
-              activeclassname="selected"
               to="/works"
               style={({ isActive }) => ({
                 color: isActive ? "var(--c-secondary)" : "var(--c-icon)",
@@ -231,6 +221,22 @@ const Sidebar = () => {
             >
               <FontAwesomeIcon
                 icon={faCode}
+                size="2x"
+                className="fill-current hover:text-secondary transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-150 duration-300"
+                onClick={() => setToggle(false)}
+              />
+            </NavLink>
+
+            <NavLink
+              exact="true"
+              activeclassname="selected"
+              to="/contact"
+              style={({ isActive }) => ({
+                color: isActive ? "var(--c-secondary)" : "var(--c-icon)",
+              })}
+            >
+              <FontAwesomeIcon
+                icon={faEnvelope}
                 size="2x"
                 className="fill-current hover:text-secondary transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-150 duration-300"
                 onClick={() => setToggle(false)}

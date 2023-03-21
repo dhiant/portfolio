@@ -160,6 +160,12 @@ input[type="email"] {
   font-family: Helvetica;
 }
 
+@media only screen and (max-width: 768px) {
+  .leaflet-popup-content {
+    width: 200px;
+  }
+}
+
 @media only screen and (min-width: 1280px) {
   .leaflet-container {
     min-height: 80vh;

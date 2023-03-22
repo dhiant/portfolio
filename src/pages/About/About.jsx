@@ -55,7 +55,7 @@ const About = () => {
           </a>
         </div>
       </div>
-      <div className="xl:w-1/2 absolute top-[40%] right-[3%] w-full pt-[32rem] h-[84%] xs:pt-[24rem] xs:h-[60%] sm:h-0 sm:pt-0 sm:fixed sm:right-0 sm:top-1/2 sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 xl:absolute xl:top-[20%] xl:translate-x-[0%] xl:-translate-y-1/3">
+      <div className="w-full h-[60%] absolute top-[80%] mt-[30%] xs:mt-[30%] sm:mt-0 xs:top-[60%] lg:top-[70%] xl:w-1/2 xl:fixed xl:top-[20%] xl:translate-x-[90%]">
         {/* cube section */}
         <div className="cubeContainer">
           <div className="cubeSpinner">

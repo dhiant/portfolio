@@ -40,6 +40,13 @@
 .aboutPage p:nth-of-type(3) {
   animation-delay: 0.5s;
 }
+.aboutPage p:last-of-type {
+  color: #687277;
+}
+.aboutPage a {
+  font-family: sans-serif;
+  line-height: 24px;
+}
 .textAnimateHover:hover {
   color: #fff;
 }

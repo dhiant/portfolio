@@ -44,9 +44,16 @@ const About = () => {
             Interested in the frontend spectrum and working on ambitious
             projects with positive people.
           </p>
+          <p>You can find my resume here</p>
+          <a
+            href="/sushant_dhimal_resume.pdf"
+            className="text-secondary text-[16px] font-light py-7"
+          >
+            Download My Resume
+          </a>
         </div>
       </div>
-      <div className="xl:w-1/2 absolute top-[40%] right-[3%] w-full pt-96 h-[84%] xs:pt-40 xs:h-[60%] sm:h-0 sm:pt-0 sm:fixed sm:right-0 sm:top-1/2 sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 xl:absolute xl:top-[20%] xl:translate-x-[0%] xl:-translate-y-1/3">
+      <div className="xl:w-1/2 absolute top-[40%] right-[3%] w-full pt-[32rem] h-[84%] xs:pt-[24rem] xs:h-[60%] sm:h-0 sm:pt-0 sm:fixed sm:right-0 sm:top-1/2 sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 xl:absolute xl:top-[20%] xl:translate-x-[0%] xl:-translate-y-1/3">
         {/* cube section */}
         <div className="cubeContainer">
           <div className="cubeSpinner">

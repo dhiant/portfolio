@@ -48,6 +48,8 @@ const About = () => {
           <a
             href="/sushant_dhimal_resume.pdf"
             className="text-secondary text-[16px] font-light py-7"
+            aria-label="link to download Sushant Dhimal's resume"
+            download="sushant_dhimal_resume.pdf"
           >
             Download My Resume
           </a>

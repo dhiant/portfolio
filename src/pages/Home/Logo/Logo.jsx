@@ -3,7 +3,7 @@ import "./logo.css";
 
 const Logo = () => {
   return (
-    <div className="logo-container w-fit self-baseline">
+    <div className="logo-container w-fit lg:relative lg:-top-14">
       <img
         className="w-96 h-96 rounded-full"
         src={ProfilePicture}

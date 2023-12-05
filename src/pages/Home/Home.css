@@ -5,7 +5,7 @@
   font-size: 22px;
   position: absolute;
   margin-top: -40px;
-  left: -15px;
+  left: 15px;
   opacity: 0.6;
 }
 .homePage h1::after {

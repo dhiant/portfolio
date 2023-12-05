@@ -1,15 +1,6 @@
 .logo-container {
   opacity: 0;
-  animation: backInRight 3s 1.5s;
+  animation: backInDown 2s 1.5s;
   animation-fill-mode: forwards;
 }
-.logo-container svg {
-  width: 100%;
-  height: auto;
-  bottom: 0;
-  transform: rotateZ(30deg) !important;
-}
 
-.logo-container .solid-logo {
-  transform: rotateZ(30deg) !important;
-}

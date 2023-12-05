@@ -30,8 +30,9 @@ const Home = () => {
     }, 4000);
   }, []);
   return (
-    <div>
-      <div className="homePage absolute left-[7%] md:left-[10%] top-[50%] sm:top-[44%] md:top-[42%] lg:top-[50%] -translate-y-[50%] w-100% md:w-[45%] max-h-[90%] z-50">
+    <div className="flex h-screen items-center justify-center">
+      <div className="px-6 flex flex-wrap-reverse items-center gap-20 justify-around lg:absolute lg:left-60">
+      <div className="homePage min-w-fit">
         <h1 className="text-white text-[48px] md:text-[56px] leading-[48px] md:leading-[53px] m-0 font-coolvetica font-normal after:ml-[2px] md:after:ml-[20px]">
           <span className={letterClass}>H</span>
           <span className={`${letterClass} _12`}>i</span>
@@ -62,6 +63,7 @@ const Home = () => {
         </Link>
       </div>
       <Logo />
+    </div>
     </div>
   );
 };

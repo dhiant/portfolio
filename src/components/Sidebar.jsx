@@ -16,9 +16,17 @@ import {
   faGithub,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+import RoundToolTip from "./common/RoundToolTip";
 
 const Sidebar = () => {
   const [toggle, setToggle] = useState(false);
+  const [iconLabel, setIconLabel] = useState("");
+  const [toolTipVisibility, setToolTipVisibility] = useState("");
+
+  const handleToolTipVisibility = (iconLabel,toolTipVisibility) => {
+  setIconLabel(iconLabel);
+  setToolTipVisibility(toolTipVisibility);
+  }
   return (
     <header className="bg-sidebar w-full h-28 lg:w-24 lg:h-screen lg:fixed top-0 z-10 flex flex-row lg:flex-col items-center lg:gap-x-10 lg:justify-between relative ">
       <Link to="/">
@@ -41,14 +49,17 @@ const Sidebar = () => {
           to="/"
           style={({ isActive }) => ({
             color: isActive ? "var(--c-secondary)" : "var(--c-icon)",
+            position:'relative'
           })}
+          onMouseEnter={() => handleToolTipVisibility("home","block")}
+          onMouseLeave={() => handleToolTipVisibility("home","hidden")}
         >
           <FontAwesomeIcon
             icon={faHome}
             size="2x"
-            title="Home"
             className="fill-current hover:text-secondary transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-150 duration-300"
           />
+          <RoundToolTip toolTipVisibility={iconLabel === "home" && toolTipVisibility === "block" ? "block" : "hidden"} iconLabel = "Home"/>
         </NavLink>
         <NavLink
           exact="true"
@@ -56,14 +67,17 @@ const Sidebar = () => {
           to="/about"
           style={({ isActive }) => ({
             color: isActive ? "var(--c-secondary)" : "var(--c-icon)",
+            position:'relative'
           })}
+          onMouseEnter={() => handleToolTipVisibility("about","block")}
+          onMouseLeave={() => handleToolTipVisibility("about","hidden")}
         >
           <FontAwesomeIcon
             icon={faUser}
             size="2x"
-            title="About me"
             className="fill-current hover:text-secondary transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-150 duration-300"
           />
+           <RoundToolTip toolTipVisibility={iconLabel === "about" && toolTipVisibility === "block" ? "block" : "hidden"} iconLabel = "About me"/>
         </NavLink>
         <NavLink
           exact="true"
@@ -71,14 +85,17 @@ const Sidebar = () => {
           to="/works"
           style={({ isActive }) => ({
             color: isActive ? "var(--c-secondary)" : "var(--c-icon)",
+            position:"relative"
           })}
+          onMouseEnter={() => handleToolTipVisibility("works", "block")}
+          onMouseLeave={() => handleToolTipVisibility("works", "hidden")}
         >
           <FontAwesomeIcon
             icon={faBriefcase}
             size="2x"
-            title="My Works"
             className="fill-current hover:text-secondary transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-150 duration-300"
           />
+          <RoundToolTip toolTipVisibility={iconLabel === "works" && toolTipVisibility === "block" ? "block" : "hidden"} iconLabel="My Works"/>
         </NavLink>
         <NavLink
           exact="true"
@@ -86,14 +103,17 @@ const Sidebar = () => {
           to="/skills"
           style={({ isActive }) => ({
             color: isActive ? "var(--c-secondary)" : "var(--c-icon)",
+            position:"relative"
           })}
+          onMouseEnter={() => handleToolTipVisibility("skills", "block")}
+          onMouseLeave={() => handleToolTipVisibility("skills", "hidden")}
         >
           <FontAwesomeIcon
             icon={faCode}
             size="2x"
-            title="My Skills"
             className="fill-current hover:text-secondary transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-150 duration-300"
           />
+          <RoundToolTip toolTipVisibility={iconLabel === "skills" && toolTipVisibility === "block" ? "block" : "hidden"} iconLabel="My Skills"/>
         </NavLink>
 
         <NavLink
@@ -102,14 +122,17 @@ const Sidebar = () => {
           to="/contact"
           style={({ isActive }) => ({
             color: isActive ? "var(--c-secondary)" : "var(--c-icon)",
+            position:'relative'
           })}
+          onMouseEnter={() => handleToolTipVisibility("contact","block")}
+          onMouseLeave={() => handleToolTipVisibility("contact","hidden")}
         >
           <FontAwesomeIcon
             icon={faEnvelope}
             size="2x"
-            title="My Contacts"
             className="fill-current hover:text-secondary transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-150 duration-300"
           />
+          <RoundToolTip toolTipVisibility={iconLabel === "contact" && toolTipVisibility === "block" ? "block" : "hidden"} iconLabel="Contact me"/>
         </NavLink>
       </nav>
       <ul className="hidden md:flex md:pr-7 lg:pr-0 lg:flex-col items-center gap-x-12 lg:gap-y-8 lg:mb-5">

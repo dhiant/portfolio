@@ -3,13 +3,11 @@ import { Link, NavLink } from "react-router-dom";
 import Logo from "../assets/images/logo-s.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faBars,
   faEnvelope,
   faHome,
   faUser,
   faCode,
   faBriefcase,
-  faClose,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faLinkedin,
@@ -17,6 +15,7 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import RoundToolTip from "./common/RoundToolTip";
+import HamburgerMenu from "./common/HamburgerMenu";
 
 const Sidebar = () => {
   const [toggle, setToggle] = useState(false);
@@ -173,22 +172,16 @@ const Sidebar = () => {
         </li>
       </ul>
       {/* collapsable button */}
-      <div className="absolute top-7 right-8 md:hidden">
-        <button onClick={() => setToggle(!toggle)}>
-          <FontAwesomeIcon
-            icon={!toggle ? faBars : faClose}
-            className="text-secondary"
-            size="3x"
-          />
-        </button>
-      </div>
+      <HamburgerMenu toggle={toggle} setToggle={setToggle}/>
 
       {toggle && (
         <div
-          className="md:hidden bg-sidebar px-4 w-full h-20 absolute top-28 flex flex-wrap gap-y-10 items-center justify-center menuButtons z-10
+          className="md:hidden bg-sidebar px-4 w-full h-screen fixed top-0 flex flex-wrap gap-y-10 items-center justify-center menuButtons z-10
         "
         >
-          <div className="flex gap-x-16">
+          {/* collapsable button */}
+      <HamburgerMenu toggle={toggle} setToggle={setToggle}/>
+          <div className="flex flex-col gap-16">
             <NavLink
               exact="true"
               activeclassname="selected"
@@ -196,13 +189,15 @@ const Sidebar = () => {
               style={({ isActive }) => ({
                 color: isActive ? "var(--c-secondary)" : "var(--c-icon)",
               })}
+              className={`flex gap-x-5 items-center`}
+              onClick={() => setToggle(false)}
             >
               <FontAwesomeIcon
                 icon={faHome}
                 size="2x"
-                className="fill-current hover:text-secondary transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-150 duration-300"
-                onClick={() => setToggle(false)}
+                className="fill-current hover:text-secondary transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-150 duration-300" 
               />
+              <span className="text-4xl text-icon font-coolvetica">Home</span>
             </NavLink>
             <NavLink
               exact="true"
@@ -211,13 +206,15 @@ const Sidebar = () => {
               style={({ isActive }) => ({
                 color: isActive ? "var(--c-secondary)" : "var(--c-icon)",
               })}
+              className={`flex gap-x-5 items-center`}
+              onClick={() => setToggle(false)}
             >
               <FontAwesomeIcon
                 icon={faUser}
                 size="2x"
                 className="fill-current hover:text-secondary transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-150 duration-300"
-                onClick={() => setToggle(false)}
               />
+              <span className="text-4xl text-icon font-coolvetica">About Me</span>
             </NavLink>
             <NavLink
               exact="true"
@@ -226,13 +223,15 @@ const Sidebar = () => {
               style={({ isActive }) => ({
                 color: isActive ? "var(--c-secondary)" : "var(--c-icon)",
               })}
+              className={`flex gap-x-5 items-center`}
+              onClick={() => setToggle(false)}
             >
               <FontAwesomeIcon
                 icon={faBriefcase}
                 size="2x"
                 className="fill-current hover:text-secondary transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-150 duration-300"
-                onClick={() => setToggle(false)}
               />
+              <span className="text-4xl text-icon font-coolvetica">My Works</span>
             </NavLink>
             <NavLink
               exact="true"
@@ -241,13 +240,15 @@ const Sidebar = () => {
               style={({ isActive }) => ({
                 color: isActive ? "var(--c-secondary)" : "var(--c-icon)",
               })}
+              className={`flex gap-x-5 items-center`}
+              onClick={() => setToggle(false)}
             >
               <FontAwesomeIcon
                 icon={faCode}
                 size="2x"
                 className="fill-current hover:text-secondary transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-150 duration-300"
-                onClick={() => setToggle(false)}
               />
+              <span className="text-4xl text-icon font-coolvetica">My Skills</span>
             </NavLink>
 
             <NavLink
@@ -257,13 +258,15 @@ const Sidebar = () => {
               style={({ isActive }) => ({
                 color: isActive ? "var(--c-secondary)" : "var(--c-icon)",
               })}
+              className={`flex gap-x-5 items-center`}
+              onClick={() => setToggle(false)}
             >
               <FontAwesomeIcon
                 icon={faEnvelope}
                 size="2x"
                 className="fill-current hover:text-secondary transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-150 duration-300"
-                onClick={() => setToggle(false)}
               />
+              <span className="text-4xl text-icon font-coolvetica">Contact Me</span>
             </NavLink>
           </div>
           {/* social accounts */}

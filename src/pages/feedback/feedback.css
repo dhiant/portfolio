@@ -27,6 +27,8 @@
 	line-height: 24px;
 	min-width: fit-content;
 	font-family: sans-serif;
+}
+.feedbackPage .feedback_first_col p {
 	animation: fadeInLeft 4s;
 }
 .feedbackPage label[for="rating"] {
@@ -36,4 +38,3 @@
 	line-height: 24px;
 	font-family: sans-serif;
 }
-
